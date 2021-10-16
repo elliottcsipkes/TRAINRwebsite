@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    font-size: 16;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Helvetica', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/girljumping.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    display: flex;
+    height: 5rem;
+    width: 100%;
+    justify-content: space-around;
+    background: transparent;
+    align-items: center;
+
+
+    z-index: 1000;
+    /*box-shadow: 0 3px 5px #0004;*/
+}
+
+#logo {
+    height: 40px;
+    z-index: 100;
+    padding-top: 2px;
+}
+
+.navlist {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.navlinks {
+    text-decoration: none;
+    color:#494F51;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-left: 45px;
+    transition: 0.2s ease-in;
+}
+
+.navlinks:hover {
+    color: #338FB8;
+}
+
+.hero {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    height: 50vw;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.parallax {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height:100%;
+    /*background-image: url('../images/girljumping.png');*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.herocontent {
+    position: absolute;
+    z-index: 25;
+    top: 10%;
+    text-align: left;
+    color: #494F51;
+    font-size: 45px;
+    margin-right: 23%;
+}
+
+.herocontent h1 {
+    font-size: 95px;
+    font-family: 'Helvetica', sans-serif;
+    z-index: 30;
+}
+
+.herocontent p {
+    padding-top: 15px;
+    font-size: 35px;
+    font-weight: 500;
+    z-index: 30;
+}
+
+button {
+    border:none;
+    color: #fff;
+    background-color: #338FB8;
+    margin-top: 36px;
+    padding: 20px 32px;
+    font-size: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px #0005;
+    font-weight: 600;
+    transition: .2s ease-in;
+    z-index: 30;
+}
+button:hover {
+    background-color: #245C81;
+    margin-top: 34px;
+}
+#about-locate {
+    position: absolute;
+    display: block;
+    top: 91.5vh;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.about {
+    position: relative;
+    display: flex;
+    height: 90vh;
+    justify-content: space-around;
+    z-index: 39;
+    margin: 0;
+    background-color: #495a5fEF;
+}
+
+.about div h2 {
+    padding-top: 50px;
+    color: #cde4e3;
+    font-size: 50px;
+    text-align: center;
+}
+
+.group {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 95%;
+    max-width: 1400px;
+}
+.aboutcont {
+    text-align: center;
+    width: 33%;
+    padding: 60px 30px;
+    color: #cde4e3;
+    font-size: 18px;
+}
+.icon{
+    padding-bottom: 40px;
+    filter: invert(92%) sepia(24%) saturate(128%) hue-rotate(128deg) brightness(96%) contrast(87%);
+}
+
+#how-locate {
+    position: absolute;
+    display: block;
+    top: 181.4vh;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.how {
+    height: 100vh;
+    background-color: #cde4e3BB;
+    z-index: 40;
+    color: #b16e5d;
+    text-shadow: 1px 1px 2px #0003;
+}
+.how h2 {
+    padding-top: 50px;
+    color: #b16e5d;
+    font-size: 50px;
+    text-align: center;
+}
+
+.howcont strong {
+    width: 85%;
+    max-width: 1400px;
+    font-size: 25px;
+    margin: auto;
+}
+
+.howcont {
+    padding-top: 40px;
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    align-content: center;
+}
+
+.intercont {
+    display: flex;
+    font-size: 18px;
+}
+
+.howimage {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px #0005;
+    margin-left: 50px;
+}
+
+@media (max-width: 768px) {
+
+    .herocontent {
+        position: absolute;
+        z-index: 25;
+        top: 32%;
+        text-align: center;
+        color: #495a5f;
+        font-size: 45px;
+    }
+    
+    .herocontent h1 {
+        font-size: 68px;
+        font-family: 'Ephesis', cursive;
+        z-index: 30;
+    }
+    
+    .herocontent p {
+        padding-top: 10px;
+        font-size: 23px;
+        font-weight: 500;
+        z-index: 30;
+    }
+    
+    button {
+        border:none;
+        color: #cde4e3;
+        background-color: #b16e5dAA;
+        margin: 36px;
+        padding: 20px 28px;
+        font-size: 22px;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 2px 2px 4px #0005;
+        font-weight: 600;
+        transition: .2s ease-in;
+        z-index: 30;
+    }
+    button:hover {
+        background-color: #b16e5d;
+        margin: 34px;
+    }
+    #about-locate {
+        position: absolute;
+        display: block;
+        top: 91.5vh;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    
+    .text {
+        padding-bottom: 80px;
+    }
+    .about {
+        position: relative;
+        display: block;
+        justify-content: space-around;
+        z-index: 39;
+        margin: 0;
+        height: 112rem;
+    }
+    
+    .about div h2 {
+        padding-top: 50px;
+        color: #cde4e3;
+        font-size: 50px;
+        text-align: center;
+    }
+    
+    .group {
+        display: block;
+        justify-content: center;
+        margin: auto;
+        width: 95%;
+        max-width: 1400px;
+    }
+    .aboutcont {
+        text-align: center;
+        width: 95%;
+        padding: 60px 30px 0px 30px;
+        color: #cde4e3;
+        font-size: 18px;
+    }
+    .icon{
+        padding-bottom: 40px;
+        filter: invert(92%) sepia(24%) saturate(128%) hue-rotate(128deg) brightness(96%) contrast(87%);
+    }
+    
+    #how-locate {
+        position: absolute;
+        display: block;
+        top: 165rem;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    
+    .how {
+        position: relative;
+        display: block;
+        justify-content: center;
+        height: 133rem;
+        background-color: #cde4e3BB;
+        z-index: 40;
+        color: #b16e5d;
+        text-shadow: 1px 1px 2px #0003;
+        text-align: center;
+    }
+    .how h2 {
+        padding-top: 50px;
+        color: #b16e5d;
+        font-size: 50px;
+        text-align: center;
+    }
+    
+    .howcont strong {
+
+        max-width: 1400px;
+        font-size: 25px;
+        margin: auto;
+        line-height: 70px;
+    }
+    
+    .howcont {
+        padding-top: 40px;
+
+        max-width: 1200px;
+        margin: auto;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .intercont {
+        display: block;
+        font-size: 18px;
+    }
+    
+    .howimage {
+        height: 250px;
+        width: 400px;
+        object-fit: cover;
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px #0005;
+    }
+}
