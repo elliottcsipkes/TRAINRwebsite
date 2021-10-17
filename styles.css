@@ -303,7 +303,7 @@ body {
     text-align: center;
     width: 100%;
     background-image: url("/images/girljumping.png");
-    background-size: 3000px;
+    background-size: 3400px;
     min-height: 10vh;
   }
 .pricing h2 {
@@ -631,7 +631,7 @@ footer p {
     }
     
     .herocontent h1 {
-        font-size: 55px;
+        font-size: 52px;
         font-family: 'Helvetica', sans-serif;
         z-index: 30;
     }
