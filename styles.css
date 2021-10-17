@@ -13,8 +13,8 @@ body {
     height: 100%;
     width: 100%;
     background-image: url('../images/girljumping.png');
-    background-size: 1920px;
-    background-repeat: no-repeat;
+    background-size: 2150px;
+    background-repeat: repeat;
     background-position: top;
 }
 
@@ -107,7 +107,7 @@ body {
     z-index: 30;
 }
 
-button {
+.topbtn {
     border:none;
     color: #fff;
     background-color: #338FB8;
@@ -121,7 +121,7 @@ button {
     transition: .2s ease-in;
     z-index: 30;
 }
-button:hover {
+.topbtn:hover {
     background-color: #245C81;
     margin-top: 34px;
 }
@@ -134,10 +134,15 @@ button:hover {
     left: 0;
 }
 
+.mobiletitle {
+    display: none;
+}
+
 .about {
     position: relative;
     display: flex;
-    height: 100vh;
+    min-height: 10vh;
+    vertical-align: middle;
     justify-content: space-around;
     z-index: 39;
     margin: 0;
@@ -147,7 +152,7 @@ button:hover {
 
 
 .about div h2 {
-    padding-top: 70px;
+    padding-top: 10px;
     color: #494F51;
     font-size: 56px;
     text-align: left;
@@ -162,6 +167,7 @@ button:hover {
     width: 80%;
     max-width: 1400px;
 }
+
 .aboutcont {
     text-align: left;
     width: 50%;
@@ -196,9 +202,10 @@ button:hover {
 .mission {
     position: relative;
     display: flex;
-    height: 40vh;
+    min-height: 30vh;
     justify-content: space-around;
     z-index: 39;
+    vertical-align: middle;
     margin: 0;
     background-image: url("/images/quotebackground.png");
     background-position-y: 60vh;
@@ -208,28 +215,27 @@ button:hover {
 .missiongroup {
     position: relative;
     display: flex;
-    height: 30vh;
-    align-content: center;
-    justify-content: space-around;
     z-index: 39;
+    padding: 50px 0px;
     width: 50%;
+    min-width: 700px;
     margin: auto;
+    top: 50%;
 }
 
 .ceopic {
-    margin: auto;
     border-radius: 50%;
-    height: 70%;
+    max-height: 200px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 .missioncont {
     margin: auto;
     padding-left: 60px;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
 }
 .quote {
-    font-size: 28px;
+    font-size: 29px;
     padding-bottom: 12px;
 }
 
@@ -298,7 +304,7 @@ button:hover {
     width: 100%;
     background-image: url("/images/girljumping.png");
     background-size: 3000px;
-    height: 100vh;
+    min-height: 10vh;
   }
 .pricing h2 {
     padding-top: 100px;
@@ -308,6 +314,7 @@ button:hover {
 }
 .price-comparison {
     padding-top: 120px;
+    padding-bottom: 160px;
     display: flex;
     position: relative;
     justify-content: center;
@@ -503,6 +510,7 @@ label.fcf-label {
 .fcf-btn {
     display: inline-block;
     font-weight: 400;
+    margin: auto;
     color: #212529;
     text-align: center;
     vertical-align: middle;
@@ -526,15 +534,6 @@ label.fcf-label {
     }
 }
 
-.fcf-btn:hover {
-    color: #212529;
-    text-decoration: none;
-}
-
-.fcf-btn:focus, .fcf-btn.focus {
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
 
 .fcf-btn-primary {
     color: #fff;
@@ -595,17 +594,26 @@ footer p {
 
 
 
-
+@media (max-width: 1920px) {
+    body {
+        background-size: 1920px;
+    }
+}
 
 @media (max-width: 768px) {
 
     body {
-        background-size: 1280px 720px;
-        background-position: center;
+        background-size: cover;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    .navlist {
+        display: none;
     }
 
     .hero {
-        height: 500px;
+        min-height: 500px;
         width: 100%;
         justify-content: center;
     }
@@ -613,12 +621,13 @@ footer p {
     .herocontent {
         position: absolute;
         z-index: 25;
-        top: 5%;
+        top: 15%;
         text-align: center;
         color: #495a5f;
         font-size: 45px;
         justify-content: center;
         margin-right: 0;
+        padding-bottom: 30px;
     }
     
     .herocontent h1 {
@@ -634,7 +643,7 @@ footer p {
         z-index: 30;
     }
     
-    button {
+    .topbtn {
         border:none;
         color: #fff;
         background-color: #338FB8;
@@ -648,56 +657,111 @@ footer p {
         transition: .2s ease-in;
         z-index: 30;
     }
-    button:hover {
+    .topbtn:hover {
         background-color: #245C81;
         margin: 34px;
     }
-    #about-locate {
-        position: absolute;
-        display: block;
-        top: 91.5vh;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
+
     
     .text {
         padding-bottom: 80px;
     }
     .about {
         position: relative;
-        display: block;
+        display: flex;
+        flex-direction: column;
         justify-content: space-around;
         z-index: 39;
+        margin: auto;
+        background-color: #fff;
+        min-height: 12rem;
+    }
+    .mobiletitle {
+        display: block;
+        padding-top: 50px;
+        padding-bottom: 50px;
         margin: 0;
-        height: 112rem;
+        font-size: 50px;
+        color: #494F51;
+        text-align: center
+    }
+    .aboutcont {
+        padding: 0;
+    }
+
+    .about div h2 {
+
+        display: none;
     }
     
-    .about div h2 {
-        padding-top: 50px;
-        color: #cde4e3;
-        font-size: 50px;
+    .mockup {
+        order: 2;
+        padding: 0;
+        padding-bottom: 0px;
+        height: 500px;
+        display: block;
+    }
+    .aboutcont{
+        padding-top: 0;
+    }
+    .aboutcont p {
+        margin: 0;
+        padding-top: 0;
+        text-align: center;
+        width: 100%;
+    }
+    .aboutcont .secondp {
+        margin: 0;
         text-align: center;
     }
-    
+
+
     .group {
         display: block;
         justify-content: center;
         margin: auto;
-        width: 95%;
+        width: 100%;
         max-width: 1400px;
     }
     .aboutcont {
         text-align: center;
         width: 95%;
         padding: 60px 30px 0px 30px;
-        color: #cde4e3;
         font-size: 18px;
     }
-    .icon{
-        padding-bottom: 40px;
-        filter: invert(92%) sepia(24%) saturate(128%) hue-rotate(128deg) brightness(96%) contrast(87%);
+
+    .mission {
+        position: relative;
+        display: block;
+        min-height: 30vh;
+        z-index: 39;
+        margin: 0;
     }
+    
+    .missiongroup {
+        display: block;
+        z-index: 39;
+        padding: 60px 0px;
+        min-width: 0px;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .missioncont {
+        display: block;
+        margin: auto;
+        padding-left: 0px;
+        padding-top: 20px;
+        width: 100%;
+        color: #fff;
+        font-size: 18px;
+    }
+    .quote {
+        font-size: 29px;
+        padding-bottom: 12px;
+    }
+    
     
     #how-locate {
         position: absolute;
@@ -759,5 +823,12 @@ footer p {
         justify-content: center;
         border-radius: 10px;
         box-shadow: 2px 2px 4px #0005;
+    }
+    .fcf-btn {
+        margin: 0;
+        width: 100%;
+    }
+    .fcf-body {
+        max-width: 80%;
     }
 }
